@@ -8,8 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "release:pr": "release-please release-pr --token=GH_TOKEN --repo-url=iwmywn/release-test --target-branch=main",
-    "release:github": "release-please github-release --token=GH_TOKEN --repo-url=iwmywn/release-test --target-branch=main",
+    "release": "release-it",
     "prepare": "husky install",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
@@ -31,6 +30,7 @@
     "globals": "^15.15.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.5.1",
+    "release-it": "^18.1.2",
     "release-please": "^17.0.0",
     "semantic-release": "^24.2.3",
     "typescript": "~5.7.2",
