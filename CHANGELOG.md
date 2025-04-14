@@ -1,5 +1,17 @@
 # Changelog
 
+## [25.16.1](https://github.com/iwmywn/release-test/compare/v25.16.0...v25.16.1) (2025-04-14)
+
+
+### Features
+
+* add release-version and release-and-commit file ([781cb9c](https://github.com/iwmywn/release-test/commit/781cb9c2c0594703e09bc67315d156865ea253da))
+
+
+### Miscellaneous Chores
+
+* release v25.16.1 ([6e75a32](https://github.com/iwmywn/release-test/commit/6e75a3233cb6443e44a4e660cbcfdc37b668128a))
+
 ## [25.16.0](https://github.com/iwmywn/release-test/compare/v1.4.0...v25.16.0) (2025-04-14)
 
 
