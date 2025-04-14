@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/iwmywn/release-test/compare/release-test-v1.0.0...release-test-v1.1.0) (2025-04-14)
+
+
+### Features
+
+* changelog ([8ff868e](https://github.com/iwmywn/release-test/commit/8ff868edc5b40dd4900356a0b539463650e810f2))
+
 ## 1.0.0 (2025-04-14)
 
 ### Features
