@@ -9,3 +9,4 @@
 "ci",
 "style",
 "chore",
+"revert",
