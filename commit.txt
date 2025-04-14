@@ -3,3 +3,4 @@
 "fix",
 "docs",
 "refactor",
+"perf",
