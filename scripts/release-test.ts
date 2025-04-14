@@ -51,7 +51,7 @@ const main = () => {
 
   console.log("🧾 Getting latest changelog...");
   const changelog = run("npx conventional-changelog -p angular -r 1");
-
+  console.log(changelog.replace(/"/g, '\\"'));
   console.log("✅ Committing changes...");
   run("git add .");
   run(
