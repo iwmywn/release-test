@@ -4,6 +4,7 @@ dotenv.config();
 
 const GH_TOKEN = process.env.GH_TOKEN;
 const REPO_URL = "iwmywn/release-test";
+const TARGET_BRANCH = "release-trigger";
 
 if (!GH_TOKEN) {
   console.error("❌ GH_TOKEN is not set.");
@@ -20,8 +21,8 @@ if (!mode || !["pr", "github"].includes(mode)) {
 
 const command =
   mode === "pr"
-    ? `npx release-please release-pr --token=${GH_TOKEN} --repo-url=${REPO_URL}`
-    : `npx release-please github-release --token=${GH_TOKEN} --repo-url=${REPO_URL}`;
+    ? `npx release-please release-pr --token=${GH_TOKEN} --repo-url=${REPO_URL} --target-branch=${TARGET_BRANCH}`
+    : `npx release-please github-release --token=${GH_TOKEN} --repo-url=${REPO_URL} --target-branch=${TARGET_BRANCH}`;
 
 try {
   execSync(command, { stdio: "inherit" });
