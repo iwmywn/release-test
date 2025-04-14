@@ -1,6 +1,5 @@
 "feat",
 "impr",
-"fix",
 "docs",
 "perf",
 "test",
