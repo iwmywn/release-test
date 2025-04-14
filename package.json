@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "release": "release-it",
     "prepare": "husky install",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "release:pr": "tsx scripts/release.ts pr",
+    "release:github": "tsx scripts/release.ts github"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -23,7 +24,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
-    "conventional-changelog-cli": "^5.0.0",
+    "dotenv": "^16.5.0",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
@@ -32,6 +33,7 @@
     "lint-staged": "^15.5.1",
     "release-please": "^17.0.0",
     "semantic-release": "^24.2.3",
+    "tsx": "^4.19.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
