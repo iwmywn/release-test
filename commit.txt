@@ -4,3 +4,4 @@
 "docs",
 "refactor",
 "perf",
+"test",
