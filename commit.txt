@@ -8,3 +8,4 @@
 "build",
 "ci",
 "style",
+"chore",
