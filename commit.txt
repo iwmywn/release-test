@@ -5,3 +5,4 @@
 "refactor",
 "perf",
 "test",
+"build",
