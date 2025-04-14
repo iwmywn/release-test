@@ -6,3 +6,4 @@
 "perf",
 "test",
 "build",
+"ci",
