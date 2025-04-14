@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.3.0](https://github.com/iwmywn/release-test/compare/v1.2.0...v1.3.0) (2025-04-14)
+
+
+### Features
+
+* feat ([7f76668](https://github.com/iwmywn/release-test/commit/7f76668f08dfea3cd2a13e0ff69b217ec3fe52d1))
+
+
+### Bug Fixes
+
+* fix ([3e41eaa](https://github.com/iwmywn/release-test/commit/3e41eaad0e6596954dc9e4b8ff1b424ec319758e))
+
+
+### Performance Improvements
+
+* perf ([d67628c](https://github.com/iwmywn/release-test/commit/d67628c90a4d563403a66a53b0c208f15fb3d6ae))
+
+
+### Reverts
+
+* revert ([a32e52d](https://github.com/iwmywn/release-test/commit/a32e52d711db8f06cb3749795ba9b25ede51df27))
+
 ## [1.2.0](https://github.com/iwmywn/release-test/compare/v1.1.0...v1.2.0) (2025-04-14)
 
 ### Features
