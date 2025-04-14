@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --no-install commitlint --edit "$1" || {
+  echo 'Commit message does not follow the conventional format!'
+
+  if command -v code >/dev/null; then
+    code commitlint.config.cjs
+  elif command -v subl >/dev/null; then
+    subl commitlint.config.cjs
+  elif command -v atom >/dev/null; then
+    atom commitlint.config.cjs
+  elif command -v vim >/dev/null; then
+    vim commitlint.config.cjs
+  elif command -v "notepad++.exe" >/dev/null; then
+    notepad++.exe commitlint.config.cjs
+  else
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+      open -a TextEdit commitlint.config.cjs
+    else
+      notepad commitlint.config.cjs
+    fi
+  fi
+
+  exit 1
+}
