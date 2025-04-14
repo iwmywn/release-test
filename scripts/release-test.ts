@@ -54,18 +54,19 @@ const main = () => {
   const changelogLines = rawChangelog.split("\n");
   const changelog = changelogLines
     .filter((line, index) => !(index === 0 && line.startsWith("## ")))
-    .join("\n");
+    .join("\n")
+    .replace(/"/g, '\\"');
+
   console.log("✅ Committing changes...");
   run("git add .");
-  run(
-    `git commit -m "chore: release v${newVersion}" -m "${changelog.replace(
-      /"/g,
-      '\\"'
-    )}"`
-  );
+  run(`git commit -m "chore: release v${newVersion}" -m "${changelog}"`);
+
+  fs.writeFileSync(".tagmessage", changelog);
 
   console.log("🏷️ Creating annotated tag...");
-  run(`git tag -a v${newVersion} -m "${changelog.replace(/"/g, '\\"')}"`);
+  run(`git tag -a v${newVersion} -F .tagmessage`);
+
+  fs.unlinkSync(".tagmessage");
 
   console.log("📤 Pushing changes and tag...");
   run("git push");
