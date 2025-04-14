@@ -2,3 +2,4 @@
 "impr",
 "fix",
 "docs",
+"refactor",
