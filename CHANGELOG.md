@@ -1,5 +1,17 @@
 # Changelog
 
+## [25.16.0](https://github.com/iwmywn/release-test/compare/v1.4.0...v25.16.0) (2025-04-14)
+
+
+### Features
+
+* add script ([4d61d93](https://github.com/iwmywn/release-test/commit/4d61d93275ad34f4d1b34c2af16fa5e887cc0073))
+
+
+### Miscellaneous Chores
+
+* release v25.16.0 ([ae3f828](https://github.com/iwmywn/release-test/commit/ae3f8285ceabc13266261357b1cd320c9fde3cde))
+
 ## [1.4.0](https://github.com/iwmywn/release-test/compare/v1.3.0...v1.4.0) (2025-04-14)
 
 
