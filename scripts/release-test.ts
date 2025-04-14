@@ -50,8 +50,11 @@ const main = () => {
   run("npx conventional-changelog -p angular -i CHANGELOG.md -s");
 
   console.log("🧾 Getting latest changelog...");
-  const changelog = run("npx conventional-changelog -p angular -r 1");
-
+  const rawChangelog = run("npx conventional-changelog -p angular -r 1");
+  const changelogLines = rawChangelog.split("\n");
+  const changelog = changelogLines
+    .filter((line, index) => !(index === 0 && line.startsWith("## ")))
+    .join("\n");
   console.log("✅ Committing changes...");
   run("git add .");
   run(
