@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/iwmywn/release-test/compare/v1.3.0...v1.4.0) (2025-04-14)
+
+
+### Features
+
+* add release script ([f246a47](https://github.com/iwmywn/release-test/commit/f246a4704874e486c6884bfe6821fed06e718019))
+
 ## [1.3.0](https://github.com/iwmywn/release-test/compare/v1.2.0...v1.3.0) (2025-04-14)
 
 
