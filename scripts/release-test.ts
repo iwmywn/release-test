@@ -17,7 +17,7 @@ dotenv.config();
 const PROJECT_ROOT = path.resolve(__dirname, "../");
 const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
-const run = (cmd: string) => execSync(cmd, { encoding: "utf8" }).trim();
+const run = (cmd: string) => execSync(cmd, { stdio: "pipe" }).toString();
 
 const runRoot = (cmd: string) =>
   execSync(`cd ${PROJECT_ROOT} && ${cmd}`, {
@@ -61,16 +61,14 @@ function findOriginDefaultBranch(): string {
   const spinner = ora("Checking origin default branch...").start();
 
   try {
-    const remotes = execSync("git remote", { encoding: "utf8" })
-      .split("\n")
-      .filter(Boolean);
+    const remotes = runRoot("git remote").split("\n").filter(Boolean);
 
     if (!remotes.includes("origin")) {
       spinner.fail("Remote 'origin' does not exist.");
       process.exit(1);
     }
 
-    const output = execSync("git remote show origin", { encoding: "utf8" });
+    const output = runRoot("git remote show origin");
     const match = output.match(/HEAD branch: (.+)/);
 
     if (match) {
@@ -135,7 +133,7 @@ function checkUncommittedChanges(): void {
   const spinner = ora("Checking for uncommitted changes...").start();
 
   try {
-    const status = execSync("git status --porcelain").toString().trim();
+    const status = runRoot("git status --porcelain");
 
     if (status) {
       spinner.fail(
@@ -157,9 +155,8 @@ function generateChangelog(): string {
   const spinner = ora("Generating changelog...").start();
 
   try {
-    const rawChangelog = run("npx conventional-changelog -p angular -r 1");
+    const rawChangelog = runRoot("npx conventional-changelog -p angular -r 1");
     const changelogLines = rawChangelog.split("\n");
-
     const changelog = changelogLines
       .filter((line, index) => !(index === 0 && line.startsWith("## ")))
       .join("\n")
@@ -247,7 +244,7 @@ function updateChangelog(): void {
   const spinner = ora("Updating CHANGELOG.md...").start();
 
   try {
-    execSync("npx conventional-changelog -p angular -i CHANGELOG.md -s");
+    runRoot("npx conventional-changelog -p angular -i CHANGELOG.md -s");
     spinner.succeed("CHANGELOG.md updated.");
   } catch (error) {
     spinner.fail("Failed to update CHANGELOG.md.");
@@ -286,9 +283,7 @@ function getOwnerAndRepo(): { owner: string; repo: string } {
   const spinner = ora("Getting GitHub owner and repo...").start();
 
   try {
-    const remoteUrl = execSync("git remote get-url origin", {
-      encoding: "utf8",
-    }).trim();
+    const remoteUrl = runRoot("git remote get-url origin").trim();
 
     const match = remoteUrl.match(/[:/]([^/:]+)\/([^/]+?)(?:\.git)?$/);
     if (match) {
