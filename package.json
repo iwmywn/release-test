@@ -1,7 +1,7 @@
 {
   "name": "release-test",
   "private": true,
-  "version": "25.16.14",
+  "version": "25.16.17",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -22,6 +22,7 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@eslint/js": "^9.21.0",
+    "@octokit/rest": "^21.1.1",
     "@types/node": "^22.14.1",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -35,6 +36,8 @@
     "globals": "^15.15.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.5.1",
+    "ora": "^8.2.0",
+    "readline-sync": "^1.4.10",
     "release-please": "^17.0.0",
     "semantic-release": "^24.2.3",
     "tsx": "^4.19.3",
