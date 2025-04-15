@@ -256,7 +256,7 @@ function updateChangelog(): void {
   }
 }
 
-function createCommitAndTag(newVer: string): void {
+function createCommitAndTag(newVer: string, default_branch: string): void {
   const spinner = ora("Creating commit and tag...").start();
 
   try {
@@ -265,7 +265,7 @@ function createCommitAndTag(newVer: string): void {
     run(`git tag v${newVer}`);
 
     spinner.text = "Pushing changes and tag...";
-    run("git push origin main --tags");
+    run(`git push origin ${default_branch} --tags`);
 
     spinner.succeed(`Release v${newVer} committed and tagged.`);
   } catch (error) {
@@ -320,7 +320,7 @@ async function createGithubRelease(
   await octokit.repos.createRelease({
     owner,
     repo,
-    tag_name: newVer,
+    tag_name: `v${newVer}`,
     name: `v${newVer}`,
     body: changelog,
   });
@@ -356,14 +356,14 @@ async function main() {
   const currentVer = getCurrentVersion();
   const newVer = incrementVersion(currentVer);
 
-  if (!readlineSync.keyInYN(`Ready to release ${newVer}?`)) {
+  if (!readlineSync.keyInYN(`Ready to release v${newVer}?`)) {
     console.log("Exiting.");
     process.exit(1);
   }
 
   updatePackage(newVer);
   updateChangelog();
-  createCommitAndTag(newVer);
+  createCommitAndTag(newVer, default_branch);
   const { owner, repo } = getOwnerAndRepo();
   try {
     await createGithubRelease(owner, repo, newVer, changelog);
