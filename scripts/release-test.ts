@@ -361,18 +361,19 @@ async function main() {
     process.exit(1);
   }
 
-  console.log("done");
-  // updatePackage(newVer);
-  // updateChangelog();
-  // createCommitAndTag(newVer);
-  // const { owner, repo } = getOwnerAndRepo();
-  // try {
-  //   await createGithubRelease(owner, repo, newVer, changelog);
-  // } catch (error) {
-  //   console.error(`Failed to create release: ${error}`);
-  //   console.log("Please create the release manually.");
-  //   process.exit(1);
-  // }
+  updatePackage(newVer);
+  updateChangelog();
+  createCommitAndTag(newVer);
+  const { owner, repo } = getOwnerAndRepo();
+  try {
+    await createGithubRelease(owner, repo, newVer, changelog);
+  } catch (error) {
+    console.error(`Failed to create release: ${error}`);
+    console.log("Please create the release manually.");
+    process.exit(1);
+  }
+
+  spinner.stop();
 }
 
 main();
