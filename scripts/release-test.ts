@@ -315,15 +315,23 @@ async function createGithubRelease(
   newVer: string,
   changelog: string
 ): Promise<void> {
-  console.log("Creating GitHub release...");
+  const spinner = ora("Creating GitHub release...").start();
 
-  await octokit.repos.createRelease({
-    owner,
-    repo,
-    tag_name: `v${newVer}`,
-    name: `v${newVer}`,
-    body: changelog,
-  });
+  try {
+    await octokit.repos.createRelease({
+      owner,
+      repo,
+      tag_name: `v${newVer}`,
+      name: `v${newVer}`,
+      body: changelog,
+    });
+
+    spinner.succeed("GitHub release created.");
+  } catch (error) {
+    console.error(`Failed to create release: ${error}`);
+    console.log("Please create the release manually.");
+    process.exit(1);
+  }
 }
 
 async function main() {
@@ -365,13 +373,7 @@ async function main() {
   updateChangelog();
   createCommitAndTag(newVer, default_branch);
   const { owner, repo } = getOwnerAndRepo();
-  try {
-    await createGithubRelease(owner, repo, newVer, changelog);
-  } catch (error) {
-    console.error(`Failed to create release: ${error}`);
-    console.log("Please create the release manually.");
-    process.exit(1);
-  }
+  await createGithubRelease(owner, repo, newVer, changelog);
 
   spinner.stop();
 }
