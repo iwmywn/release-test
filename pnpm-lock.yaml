@@ -45,6 +45,9 @@ importers:
       bumpp:
         specifier: ^10.1.0
         version: 10.1.0
+      conventional-changelog:
+        specifier: ^6.0.0
+        version: 6.0.0(conventional-commits-filter@5.0.0)
       conventional-changelog-cli:
         specifier: ^5.0.0
         version: 5.0.0(conventional-commits-filter@5.0.0)
