@@ -165,7 +165,7 @@ function generateChangelog(): string {
       .join("\n")
       .replace(/"/g, '\\"');
 
-    spinner.succeed("Changelog generated successfully.");
+    spinner.succeed("Changelog generated.");
     return changelog;
   } catch (error) {
     spinner.fail("Failed to generate changelog.");
@@ -248,7 +248,7 @@ function updateChangelog(): void {
 
   try {
     execSync("npx conventional-changelog -p angular -i CHANGELOG.md -s");
-    spinner.succeed("CHANGELOG.md updated successfully.");
+    spinner.succeed("CHANGELOG.md updated.");
   } catch (error) {
     spinner.fail("Failed to update CHANGELOG.md.");
     console.error(error);
@@ -267,7 +267,7 @@ function createCommitAndTag(newVer: string): void {
     spinner.text = "Pushing changes and tag...";
     run("git push origin main --tags");
 
-    spinner.succeed(`Release v${newVer} committed and tagged successfully.`);
+    spinner.succeed(`Release v${newVer} committed and tagged.`);
   } catch (error) {
     spinner.fail("Failed to create commit and tag.");
     console.error(error);
