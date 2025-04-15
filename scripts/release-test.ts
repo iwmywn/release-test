@@ -352,7 +352,7 @@ async function main() {
   console.log(changelog);
 
   if (!readlineSync.keyInYN("Changelog looks good?")) {
-    console.log("Exiting.");
+    spinner.succeed("Exiting.");
     process.exit(1);
   }
 
@@ -360,7 +360,7 @@ async function main() {
   const newVer = incrementVersion(currentVer);
 
   if (!readlineSync.keyInYN(`Ready to release v${newVer}?`)) {
-    console.log("Exiting.");
+    spinner.succeed("Exiting.");
     process.exit(1);
   }
 
