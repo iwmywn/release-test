@@ -1,3 +1,12 @@
+## [25.16.27](https://github.com/iwmywn/release-test/compare/v25.16.26...v25.16.27)
+
+### Nerd stuff
+
+These changes will not be visible to users, but are included for completeness and to credit contributors.
+
+- **chore:** rm release-please semantic-release ([bf000d9](https://github.com/iwmywn/release-test/commit/bf000d92902d8ef58be7790b69664e2ff23013cb))
+
+
 ## [25.16.26](https://github.com/iwmywn/release-test/compare/v25.16.25...v25.16.26)
 
 Thank you to all the contributors who made this release possible!
