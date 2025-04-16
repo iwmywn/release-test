@@ -1,7 +1,7 @@
 {
   "name": "release-test",
   "private": true,
-  "version": "25.16.24",
+  "version": "25.16.25",
   "type": "module",
   "scripts": {
     "dev": "vite",
