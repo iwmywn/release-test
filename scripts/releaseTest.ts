@@ -15,6 +15,7 @@ dotenv.config();
 // const args = process.argv.slice(2);
 // const DEFAULT_BRANCH = args[0];
 const PROJECT_ROOT = path.resolve(__dirname, "../");
+console.log(PROJECT_ROOT);
 const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
 const run = (cmd: string) => execSync(cmd, { stdio: "pipe" }).toString();
