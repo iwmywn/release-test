@@ -24,6 +24,9 @@ importers:
       '@eslint/js':
         specifier: ^9.21.0
         version: 9.24.0
+      '@iwmywn/release':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@octokit/rest':
         specifier: ^21.1.1
         version: 21.1.1
@@ -492,6 +495,10 @@ packages:
 
   '@iarna/toml@3.0.0':
     resolution: {integrity: sha512-td6ZUkz2oS3VeleBcN+m//Q6HlCFCPrnI0FZhrt/h4XqLEdOyYp2u21nd8MdsR+WJy5r9PTDaHTDDfhf4H4l6Q==}
+
+  '@iwmywn/release@1.0.0':
+    resolution: {integrity: sha512-0VT3xPHXwM5cJFiaTrpyI4JdNcJ0/u/Q1bZmLKyX5QXt+N4Uq10dt15N3ID+xAxz0p71oD52foFp9IcboP260A==}
+    hasBin: true
 
   '@jridgewell/gen-mapping@0.3.8':
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
@@ -3459,6 +3466,13 @@ snapshots:
   '@hutson/parse-repository-url@5.0.0': {}
 
   '@iarna/toml@3.0.0': {}
+
+  '@iwmywn/release@1.0.0':
+    dependencies:
+      '@octokit/rest': 21.1.1
+      dotenv: 16.5.0
+      ora: 8.2.0
+      readline-sync: 1.4.10
 
   '@jridgewell/gen-mapping@0.3.8':
     dependencies:
