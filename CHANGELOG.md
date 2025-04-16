@@ -1,3 +1,20 @@
+## [25.16.26](https://github.com/iwmywn/release-test/compare/v25.16.25...v25.16.26)
+
+Thank you to all the contributors who made this release possible!
+
+
+
+
+### Nerd stuff
+
+These changes will not be visible to users, but are included for completeness and to credit contributors.
+
+- **chore:** use my own pkg ([5b7aa9d](https://github.com/iwmywn/release-test/commit/5b7aa9d3b9d5ae6f6f510c3ad4842fd44ec36bbd))
+- **chore:** add message for again branch (@iwmywn-test) ([#22](https://github.com/iwmywn/release-test/pull/22)) ([f36bbad](https://github.com/iwmywn/release-test/commit/f36bbad9f3f86ba1e26a851fbcbe52b0382a009e))
+- **chore:** add message for pr-test branch ([#21](https://github.com/iwmywn/release-test/pull/21)) ([039fc6b](https://github.com/iwmywn/release-test/commit/039fc6be43c2ba164e8264f4d40c109796efe270))
+- **chore:** add message ([029dd57](https://github.com/iwmywn/release-test/commit/029dd575bdb6bc49af8eb58fe17caf75d812556e))
+
+
 ## [25.16.22](https://github.com/iwmywn/release-test/compare/v25.16.20...v25.16.22) (2025-04-15)
 
 
