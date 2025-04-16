@@ -12,7 +12,8 @@
     "prepare": "husky install",
     "release:pr": "tsx scripts/release.ts pr",
     "release:github": "tsx scripts/release.ts github",
-    "release:version": "tsx scripts/release-version.ts"
+    "release:version": "tsx scripts/release-version.ts",
+    "test": "npx tsx scripts/test.ts"
   },
   "dependencies": {
     "react": "^19.0.0",

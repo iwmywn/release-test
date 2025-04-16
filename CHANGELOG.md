@@ -6,13 +6,9 @@ These changes will not be visible to users, but are included for completeness an
 
 - **chore:** rm release-please semantic-release ([bf000d9](https://github.com/iwmywn/release-test/commit/bf000d92902d8ef58be7790b69664e2ff23013cb))
 
-
 ## [25.16.26](https://github.com/iwmywn/release-test/compare/v25.16.25...v25.16.26)
 
 Thank you to all the contributors who made this release possible!
-
-
-
 
 ### Nerd stuff
 
@@ -23,26 +19,19 @@ These changes will not be visible to users, but are included for completeness an
 - **chore:** add message for pr-test branch ([#21](https://github.com/iwmywn/release-test/pull/21)) ([039fc6b](https://github.com/iwmywn/release-test/commit/039fc6be43c2ba164e8264f4d40c109796efe270))
 - **chore:** add message ([029dd57](https://github.com/iwmywn/release-test/commit/029dd575bdb6bc49af8eb58fe17caf75d812556e))
 
-
 ## [25.16.22](https://github.com/iwmywn/release-test/compare/v25.16.20...v25.16.22) (2025-04-15)
-
 
 ### Bug Fixes
 
-* **changelog:** delete 25.16.19 ver ([113a514](https://github.com/iwmywn/release-test/commit/113a51464883247a848caf3ea99886237ddce3a9))
-* release test script again ([6ce2273](https://github.com/iwmywn/release-test/commit/6ce2273df46f31f911f3ce6c6c736ed96fb3e18e))
-
-
+- **changelog:** delete 25.16.19 ver ([113a514](https://github.com/iwmywn/release-test/commit/113a51464883247a848caf3ea99886237ddce3a9))
+- release test script again ([6ce2273](https://github.com/iwmywn/release-test/commit/6ce2273df46f31f911f3ce6c6c736ed96fb3e18e))
 
 ## [25.16.21](https://github.com/iwmywn/release-test/compare/v25.16.20...v25.16.21) (2025-04-15)
 
-
 ### Bug Fixes
 
-* **changelog:** delete 25.16.19 ver ([113a514](https://github.com/iwmywn/release-test/commit/113a51464883247a848caf3ea99886237ddce3a9))
-* release test script again ([6ce2273](https://github.com/iwmywn/release-test/commit/6ce2273df46f31f911f3ce6c6c736ed96fb3e18e))
-
-
+- **changelog:** delete 25.16.19 ver ([113a514](https://github.com/iwmywn/release-test/commit/113a51464883247a848caf3ea99886237ddce3a9))
+- release test script again ([6ce2273](https://github.com/iwmywn/release-test/commit/6ce2273df46f31f911f3ce6c6c736ed96fb3e18e))
 
 ## 25.16.20 (2025-04-15)
 
