@@ -1,4 +1,2 @@
-<<<<<<< HEAD
 hello from pr-test branch
-=======
->>>>>>> main
+hello from main
