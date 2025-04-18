@@ -1,3 +1,13 @@
+## [25.16.28](https://github.com/iwmywn/release-test/compare/v25.16.27...v25.16.28)
+
+### Nerd stuff
+
+These changes will not be visible to users, but are included for completeness and to credit contributors.
+
+- **chore:** rename file name ([5c4ff14](https://github.com/iwmywn/release-test/commit/5c4ff14921267bd67d45a9be39e2c59dd8043f28))
+- **chore:** update changelog, pkg script, add test file ([f3d0a90](https://github.com/iwmywn/release-test/commit/f3d0a90284c480457f5ce383c897d3cbd255c856))
+
+
 ## [25.16.27](https://github.com/iwmywn/release-test/compare/v25.16.26...v25.16.27)
 
 ### Nerd stuff
