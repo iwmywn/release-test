@@ -1,3 +1,9 @@
+## [25.17.1](https://github.com/iwmywn/release-test/compare/v25.17.0...v25.17.1)
+
+### Features
+
+- test ([1c0b50e](https://github.com/iwmywn/release-test/commit/1c0b50ef855d133e6f2e44db54907512b23cf2e1))
+
 ## [25.17.0](https://github.com/iwmywn/release-test/compare/v25.16.28...v25.17.0)
 
 ### Nerd stuff
