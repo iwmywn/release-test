@@ -1,3 +1,17 @@
+## [25.17.2](https://github.com/iwmywn/release-test/compare/v25.17.1...v25.17.2)
+
+### Features
+
+- test ([1c0b50e](https://github.com/iwmywn/release-test/commit/1c0b50ef855d133e6f2e44db54907512b23cf2e1))
+
+### Nerd stuff
+
+These changes will not be visible to users, but are included for completeness and to credit contributors.
+
+- **chore:** remove changelog ([a364bca](https://github.com/iwmywn/release-test/commit/a364bcaebfd5bd324659a47a56fa9e0d02b8da28))
+- **chore:** release v25.17.1 ([12f1b68](https://github.com/iwmywn/release-test/commit/12f1b6839303b21274c74bc716302cee2b9b159c))
+- **chore:** release v25.17.0 ([23a4f00](https://github.com/iwmywn/release-test/commit/23a4f00944c50afddcea119873cb81548442c3e2))
+
 ## [25.16.28](https://github.com/iwmywn/release-test/compare/v25.16.27...v25.16.28)
 
 ### Nerd stuff
